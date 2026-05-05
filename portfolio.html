@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Red Premere Enterprises portfolio — our work in custom merchandise, branded bottles, business websites and digital identity for local businesses.">
+<title>Portfolio | Red Premere Enterprises</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .portfolio-filter { display:flex; gap:10px; flex-wrap:wrap; margin:40px 0; }
+  .filter-btn { padding:9px 22px; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; background:transparent; border:1px solid #2a2a2a; color:var(--grey); cursor:pointer; font-family:'Space Grotesk',sans-serif; transition:all .25s; }
+  .filter-btn.active, .filter-btn:hover { border-color:var(--red); color:var(--white); background:rgba(204,0,0,.1); }
+  .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .portfolio-card { background:var(--black-card); border:1px solid #222; overflow:hidden; transition:all .3s; }
+  .portfolio-card:hover { border-color:var(--red); transform:translateY(-4px); box-shadow:0 10px 30px rgba(204,0,0,.15); }
+  .portfolio-card-thumb { width:100%; height:220px; display:flex; align-items:center; justify-content:center; font-size:56px; position:relative; overflow:hidden; }
+  .portfolio-card-thumb-bg { position:absolute; inset:0; }
+  .portfolio-card-thumb-icon { position:relative; z-index:1; }
+  .portfolio-card-body { padding:22px; }
+  .portfolio-card-tag { font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:7px; display:block; }
+  .portfolio-card-title { font-family:'Anton',sans-serif; font-size:1.1rem; text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px; }
+  .portfolio-card-desc { font-size:12px; color:var(--grey); font-weight:300; line-height:1.6; margin-bottom:14px; }
+  .portfolio-card-tags { display:flex; gap:6px; flex-wrap:wrap; }
+  .portfolio-tag { font-size:9px; font-weight:600; letter-spacing:1px; text-transform:uppercase; padding:3px 9px; background:rgba(204,0,0,.1); color:var(--red); }
+  .coming-soon-card { background:var(--black-card); border:1px dashed #2a2a2a; display:flex; align-items:center; justify-content:center; text-align:center; min-height:300px; flex-direction:column; gap:12px; padding:32px; }
+  .coming-soon-icon { font-size:36px; opacity:.3; }
+  .coming-soon-text { font-size:11px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#333; }
+  @media(max-width:768px) { .portfolio-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-mark">RP</div><div class="nav-logo-text"><span class="nav-logo-main">Red Premere</span><span class="nav-logo-sub">Enterprises</span></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li><li><a href="services.html" class="nav-link">Services</a></li><li><a href="portfolio.html" class="nav-link">Portfolio</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Get a Quote</a>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html" class="nav-link">Home</a><a href="services.html" class="nav-link">Services</a><a href="portfolio.html" class="nav-link">Portfolio</a><a href="about.html" class="nav-link">About</a><a href="contact.html" class="nav-link">Contact</a>
+  <a href="contact.html" class="nav-cta btn btn-red">Get a Quote</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="page-hero-eyebrow">Our Work</span>
+    <h1 class="page-hero-title">Every Brand We <span>Touch</span></h1>
+    <div class="accent-line"></div>
+    <p class="page-hero-sub">Websites built, bottles designed, merch printed. This is the work we do for local businesses in Varanasi and beyond.</p>
+  </div>
+</section>
+
+<section style="padding:90px 0; background:var(--black);">
+  <div class="container">
+    <span class="section-eyebrow">Case Studies</span>
+    <h2 class="section-title">Work That <span>Speaks</span></h2>
+    <div class="accent-line"></div>
+    <p class="section-sub">We're just getting started — and so is our portfolio. More work being added as we grow. Interested in being our next client?</p>
+
+    <div class="portfolio-filter">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Websites</button>
+      <button class="filter-btn">Merch</button>
+      <button class="filter-btn">Bottles</button>
+      <button class="filter-btn">Digital Identity</button>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!-- SAMPLE WORK 1 -->
+      <div class="portfolio-card" data-fade data-delay="1">
+        <div class="portfolio-card-thumb" style="background:linear-gradient(135deg,#1a0000,#2a0500);">
+          <div class="portfolio-card-thumb-icon">🌐</div>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="portfolio-card-tag">Website</span>
+          <div class="portfolio-card-title">Honestbro.online</div>
+          <p class="portfolio-card-desc">Custom PHP/HTML homepage with dark-mode neon aesthetic, marquee animations, and WhatsApp-integrated order flow. Built for our consumer brand.</p>
+          <div class="portfolio-card-tags"><span class="portfolio-tag">Static HTML</span><span class="portfolio-tag">WordPress</span><span class="portfolio-tag">WPCode</span></div>
+        </div>
+      </div>
+
+      <!-- SAMPLE WORK 2 -->
+      <div class="portfolio-card" data-fade data-delay="2">
+        <div class="portfolio-card-thumb" style="background:linear-gradient(135deg,#001a00,#002a10);">
+          <div class="portfolio-card-thumb-icon">💧</div>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="portfolio-card-tag">Branded Bottles</span>
+          <div class="portfolio-card-title">Custom Label Pack</div>
+          <p class="portfolio-card-desc">500ml and 1L custom-label packaged drinking water with QR codes linking to client websites. Available at ₹8 and ₹15 per piece.</p>
+          <div class="portfolio-card-tags"><span class="portfolio-tag">500ml</span><span class="portfolio-tag">1 Litre</span><span class="portfolio-tag">QR Enabled</span></div>
+        </div>
+      </div>
+
+      <!-- SAMPLE WORK 3 -->
+      <div class="portfolio-card" data-fade data-delay="3">
+        <div class="portfolio-card-thumb" style="background:linear-gradient(135deg,#0a0020,#150030);">
+          <div class="portfolio-card-thumb-icon">📱</div>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="portfolio-card-tag">Digital Identity</span>
+          <div class="portfolio-card-title">NFC Business Cards</div>
+          <p class="portfolio-card-desc">Premium NFC-enabled smart cards that open a website or digital profile on tap. Plus QR visiting cards — 50 pcs printed with full branding.</p>
+          <div class="portfolio-card-tags"><span class="portfolio-tag">NFC</span><span class="portfolio-tag">QR Code</span><span class="portfolio-tag">Premium Print</span></div>
+        </div>
+      </div>
+
+      <!-- SAMPLE WORK 4 -->
+      <div class="portfolio-card" data-fade data-delay="1">
+        <div class="portfolio-card-thumb" style="background:linear-gradient(135deg,#1a1000,#2a1500);">
+          <div class="portfolio-card-thumb-icon">👕</div>
+        </div>
+        <div class="portfolio-card-body">
+          <span class="portfolio-card-tag">Merchandise</span>
+          <div class="portfolio-card-title">DTF Print Merch</div>
+          <p class="portfolio-card-desc">Custom T-shirts and hoodies with DTF (Direct to Film) printing. Vibrant, durable prints. Used for corporate uniforms and brand merchandise.</p>
+          <div class="portfolio-card-tags"><span class="portfolio-tag">T-Shirts</span><span class="portfolio-tag">DTF Print</span><span class="portfolio-tag">Uniforms</span></div>
+        </div>
+      </div>
+
+      <!-- COMING SOON -->
+      <div class="coming-soon-card" data-fade data-delay="2">
+        <div class="coming-soon-icon">📸</div>
+        <div class="coming-soon-text">Your Project Here</div>
+        <p style="font-size:12px;color:#333;font-weight:300;line-height:1.6;">Be our next case study. Get a bundle and your brand appears here.</p>
+        <a href="contact.html" class="btn btn-red" style="margin-top:16px;font-size:10px;">Get Started</a>
+      </div>
+
+      <div class="coming-soon-card" data-fade data-delay="3">
+        <div class="coming-soon-icon">🏗️</div>
+        <div class="coming-soon-text">More Coming Soon</div>
+        <p style="font-size:12px;color:#333;font-weight:300;line-height:1.6;">We're actively onboarding clients across Varanasi. New work added regularly.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2 class="cta-banner-title">Want to Be in <span style="color:var(--red);">Our Portfolio?</span></h2>
+    <p class="cta-banner-sub">Get a bundle pack and we'll build your brand from scratch — website, bottles, merch and digital cards.</p>
+    <div class="cta-banner-btns">
+      <a href="contact.html" class="btn btn-red">Start a Project</a>
+      <a href="services.html" class="btn btn-outline">See Packages</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="nav-logo"><div class="nav-logo-mark">RP</div><div class="nav-logo-text"><span class="nav-logo-main">Red Premere</span><span class="nav-logo-sub">Enterprises</span></div></a><p class="footer-brand-desc">Varanasi's complete brand partner for local businesses.</p><div class="footer-badges"><span class="footer-badge">GST Reg.</span><span class="footer-badge">MSME Cert.</span></div></div>
+      <div><div class="footer-heading">Navigation</div><ul class="footer-links"><li><a href="index.html" class="footer-link">Home</a></li><li><a href="services.html" class="footer-link">Services</a></li><li><a href="portfolio.html" class="footer-link">Portfolio</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
+      <div><div class="footer-heading">Services</div><ul class="footer-links"><li><a href="services.html" class="footer-link">Starter Pack</a></li><li><a href="services.html" class="footer-link">Pro Pack</a></li><li><a href="services.html" class="footer-link">Premium Pack</a></li><li><a href="services.html" class="footer-link">Bottle Reorders</a></li></ul></div>
+      <div><div class="footer-heading">Contact</div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">👤</span><div><div class="footer-contact-label">Founder</div><div class="footer-contact-val">Nitesh Kumar Gupta</div></div></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">📞</span><div><div class="footer-contact-label">Phone</div><div class="footer-contact-val">+91-7007861268</div></div></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">✉</span><div><div class="footer-contact-label">Email</div><div class="footer-contact-val">info@redpremere.com</div></div></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span class="footer-bottom-text">© 2026 Red Premere Enterprises. All prices excl. GST.</span><span class="footer-bottom-brand"><span>Red</span> Premere Enterprises</span></div>
+  </div>
+</footer>
+<script src="js/main.js">
+// Filter functionality
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+</script>
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
