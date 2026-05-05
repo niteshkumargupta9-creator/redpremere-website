@@ -1,4 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+/* ═══════════════════════════════════════
+   LOGO SYSTEM (Patch 004)
+═══════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+.nav-logo {
+  display: inline-flex;
+  align-items: flex-start;
+  text-decoration: none;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.logo-lockup {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.logo-wordmark {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -1.2px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.logo-red   { color: #E63946; }
+.logo-white { color: #ffffff; }
+
+.logo-dot-mark {
+  color: #E63946;
+  font-size: 14px;
+  margin-left: 1px;
+  line-height: 1;
+  position: relative;
+  top: -3px;
+}
+
+.logo-sub {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  padding-left: 1px;
+  margin-top: 2px;
+}
+
+/* Footer variant */
+.footer .logo-white { color: #ffffff; }
+.footer .logo-sub   { color: rgba(255,255,255,0.25); }
+
 
 :root {
   --red: #CC0000; --red-dark: #8B0000; --red-bright: #FF2020;
@@ -27,42 +84,7 @@ h1,h2,h3 { font-family: 'Anton', sans-serif; text-transform: uppercase; letter-s
 .nav.scrolled { background: rgba(10,10,10,.97); box-shadow: 0 1px 0 rgba(204,0,0,.3); backdrop-filter: blur(10px); }
 .nav-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; }
 
-/* ── WORDMARK LOGO (Patch 003) ── */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
 
-.nav-wordmark {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  font-weight: 800;
-  font-size: 24px;
-  letter-spacing: -1.5px;
-  color: var(--white);
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.nav-dot {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #FF6B6B, #E63946);
-  margin-left: 3px;
-  flex-shrink: 0;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
-}
-
-.nav-ent {
-  display: none;
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  text-decoration: none;
-}
 
 
 
