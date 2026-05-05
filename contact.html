@@ -30,7 +30,10 @@
 <body>
 <nav class="nav">
   <div class="container nav-inner">
-    <a href="index.html" class="nav-logo"><div class="nav-logo-mark">RP</div><div class="nav-logo-text"><span class="nav-logo-main">Red Premere</span><span class="nav-logo-sub">Enterprises</span></div></a>
+        <a href="index.html" class="nav-logo">
+      <span class="nav-wordmark">redpremere</span><span class="nav-dot"></span>
+      <span class="nav-ent">Enterprises</span>
+    </a>
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li><li><a href="services.html" class="nav-link">Services</a></li><li><a href="portfolio.html" class="nav-link">Portfolio</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
@@ -60,14 +63,6 @@
       <div>
         <div class="contact-info-card">
           <div class="contact-info-title">Contact Person</div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon">👤</div>
-            <div>
-              <div class="contact-info-label">Founder & Director</div>
-              <div class="contact-info-val">Nitesh Kumar Gupta</div>
-              <div class="contact-info-sub">Red Premere Enterprises</div>
-            </div>
-          </div>
           <div class="contact-info-item">
             <div class="contact-info-icon">📞</div>
             <div>
@@ -106,7 +101,7 @@
 
         <div class="wa-box">
           <div class="wa-box-label">📱 WhatsApp Quick Message</div>
-          <div class="wa-box-text">After submitting the form, a WhatsApp link will open so you can send Nitesh a quick message. This speeds up the process significantly.</div>
+          <div class="wa-box-text">After submitting the form, a WhatsApp link will open so you can send a quick message. This speeds up the process significantly.</div>
         </div>
       </div>
 
@@ -193,7 +188,7 @@
   <div class="dialog-box">
     <span class="dialog-icon">✅</span>
     <div class="dialog-title">Inquiry Sent!</div>
-    <p class="dialog-message">Thank you! Nitesh will contact you within 24 hours with a detailed quote. A WhatsApp message link is opening now so you can send a quick message too.</p>
+    <p class="dialog-message">Thank you! Our team will contact you within 24 hours with a detailed quote. A WhatsApp message link is opening now so you can send a quick message too.</p>
     <div class="dialog-wa">
       <strong>📱 WhatsApp shortcut</strong><br>
       If the link didn't open, you can directly message:<br>
@@ -206,16 +201,19 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div><a href="index.html" class="nav-logo"><div class="nav-logo-mark">RP</div><div class="nav-logo-text"><span class="nav-logo-main">Red Premere</span><span class="nav-logo-sub">Enterprises</span></div></a><p class="footer-brand-desc">Varanasi's complete brand partner for local businesses.</p><div class="footer-badges"><span class="footer-badge">GST Reg.</span><span class="footer-badge">MSME Cert.</span></div></div>
+      <div>    <a href="index.html" class="nav-logo">
+      <span class="nav-wordmark">redpremere</span><span class="nav-dot"></span>
+      <span class="nav-ent">Enterprises</span>
+    </a><p class="footer-brand-desc">Varanasi's complete brand partner for local businesses.</p><div class="footer-badges"><span class="footer-badge">GST Reg.</span><span class="footer-badge">MSME Cert.</span></div></div>
       <div><div class="footer-heading">Navigation</div><ul class="footer-links"><li><a href="index.html" class="footer-link">Home</a></li><li><a href="services.html" class="footer-link">Services</a></li><li><a href="portfolio.html" class="footer-link">Portfolio</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
       <div><div class="footer-heading">Services</div><ul class="footer-links"><li><a href="services.html" class="footer-link">Starter Pack</a></li><li><a href="services.html" class="footer-link">Pro Pack</a></li><li><a href="services.html" class="footer-link">Premium Pack</a></li><li><a href="services.html" class="footer-link">Bottle Reorders</a></li></ul></div>
       <div><div class="footer-heading">Contact</div>
-        <div class="footer-contact-item"><span class="footer-contact-icon">👤</span><div><div class="footer-contact-label">Founder</div><div class="footer-contact-val">Nitesh Kumar Gupta</div></div></div>
+        
         <div class="footer-contact-item"><span class="footer-contact-icon">📞</span><div><div class="footer-contact-label">Phone</div><div class="footer-contact-val">+91-7007861268</div></div></div>
         <div class="footer-contact-item"><span class="footer-contact-icon">✉</span><div><div class="footer-contact-label">Email</div><div class="footer-contact-val">info@redpremere.com</div></div></div>
       </div>
     </div>
-    <div class="footer-bottom"><span class="footer-bottom-text">© 2026 Red Premere Enterprises. All prices excl. GST.</span><span class="footer-bottom-brand"><span>Red</span> Premere Enterprises</span></div>
+    <div class="footer-bottom"><span class="footer-bottom-text">© 2026 Red Premere Enterprises. All prices excl. GST.</span><span class="footer-bottom-brand"><span class="nav-wordmark" style="font-size:13px;letter-spacing:-0.8px;color:#2a2a2a;">redpremere</span><span class="nav-dot" style="width:4px;height:4px;margin-left:2px;background:#E63946;"></span></span></div>
   </div>
 </footer>
 
@@ -258,7 +256,7 @@
           const phone = document.getElementById('phone').value;
           const packageVal = document.getElementById('packageSelect').value;
           const msg = encodeURIComponent(
-            `Hello Nitesh! I just filled the inquiry form on redpremere.com.\n\nName: ${name}\nBusiness: ${business}\nPhone: ${phone}\nPackage: ${packageVal}\n\nLooking forward to hearing from you!`
+            `Hello! I just filled the inquiry form on redpremere.com.\n\nName: ${name}\nBusiness: ${business}\nPhone: ${phone}\nPackage: ${packageVal}\n\nLooking forward to hearing from you!`
           );
           window.open(`https://wa.me/917007861268?text=${msg}`, '_blank');
           openDialog();
