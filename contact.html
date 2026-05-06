@@ -97,8 +97,11 @@
         <p class="form-sub">Tell us about your business and what you need. We'll get back to you within 24 hours with a detailed quote.</p>
 
         <!-- Replace YOUR_FORM_ID with your Formspree form ID from formspree.io -->
-        <form id="inquiryForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <input type="hidden" name="package" id="packageField" value="">
+        <form id="inquiryForm" action="https://formsubmit.co/info@redpremere.com" method="POST">
+  <input type="hidden" name="_subject" value="New Inquiry — Red Premere Enterprises">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="false">
+  <input type="hidden" name="_template" value="table">
 
           <div class="form-grid-2">
             <div class="form-group">
@@ -210,6 +213,35 @@
 <script src="js/main.js"></script>
 <script>
   const params = new URLSearchParams(window.location.search);
+  const pkg = params.get('package');
+  if (pkg) {
+    const sel = document.getElementById('packageSelect');
+    if (sel) { for (let i=0; i<sel.options.length; i++) { if (sel.options[i].value===pkg) { sel.selectedIndex=i; break; } } }
+    const h = document.getElementById('packageField');
+    if (h) h.value = pkg;
+  }
+
+  const form = document.getElementById('inquiryForm');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) { openDialog(); form.reset(); }
+        else { alert('Something went wrong. Please email info@redpremere.com directly.'); }
+      } catch(err) { alert('Something went wrong. Please email info@redpremere.com directly.'); }
+      btn.textContent = 'Send Inquiry';
+      btn.disabled = false;
+    });
+  }
+</script>
   const pkg = params.get('package');
   if (pkg) {
     const sel = document.getElementById('packageSelect');
