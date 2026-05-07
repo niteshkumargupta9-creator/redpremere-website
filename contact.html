@@ -79,6 +79,10 @@
             <div class="info-icon">📍</div>
             <div><div class="info-label">Location</div><div class="info-val">Varanasi, Uttar Pradesh</div><div class="info-sub">Local pickup & delivery available</div></div>
           </div>
+          <div class="info-item">
+            <div class="info-icon">📸</div>
+            <div><div class="info-label">Instagram</div><div class="info-val"><a href="https://instagram.com/redpremere" target="_blank" style="color:var(--white);text-decoration:none;">@redpremere</a></div><div class="info-sub">Follow us for updates & offers</div></div>
+          </div>
         </div>
         <div class="info-card" style="border-top:3px solid var(--gold);">
           <div class="info-title">Payment Methods</div>
@@ -96,12 +100,13 @@
         <div class="form-title">Send an <span style="color:var(--red);">Inquiry</span></div>
         <p class="form-sub">Tell us about your business and what you need. We'll get back to you within 24 hours with a detailed quote.</p>
 
-        <!-- Replace YOUR_FORM_ID with your Formspree form ID from formspree.io -->
-        <form id="inquiryForm" action="https://formsubmit.co/info@redpremere.com" method="POST">
-  <input type="hidden" name="_subject" value="New Inquiry — Red Premere Enterprises">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="false">
-  <input type="hidden" name="_template" value="table">
+        <!-- Web3Forms — get free key at web3forms.com -->
+        <form id="inquiryForm">
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New Inquiry — Red Premere Enterprises">
+          <input type="hidden" name="from_name" value="redpremere.com">
+          <input type="hidden" name="redirect" value="false">
+          <input type="hidden" name="package" id="packageField" value="">
 
           <div class="form-grid-2">
             <div class="form-group">
@@ -201,6 +206,7 @@
         <div class="footer-contact-item"><span class="footer-contact-icon">📞</span><div><div class="footer-contact-label">Phone</div><div class="footer-contact-val">+91-7007861268</div></div></div>
         <div class="footer-contact-item"><span class="footer-contact-icon">✉</span><div><div class="footer-contact-label">Email</div><div class="footer-contact-val">info@redpremere.com</div></div></div>
         <div class="footer-contact-item"><span class="footer-contact-icon">📍</span><div><div class="footer-contact-label">Location</div><div class="footer-contact-val">Varanasi, Uttar Pradesh</div></div></div>
+        <div class="footer-contact-item"><span class="footer-contact-icon">📸</span><div><div class="footer-contact-label">Instagram</div><div class="footer-contact-val"><a href="https://instagram.com/redpremere" target="_blank" style="color:inherit;text-decoration:none;">@redpremere</a></div></div></div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -229,37 +235,13 @@
       btn.textContent = 'Sending...';
       btn.disabled = true;
       try {
-        const res = await fetch(form.action, {
+        const formData = new FormData(form);
+        const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
+          body: formData
         });
-        if (res.ok) { openDialog(); form.reset(); }
-        else { alert('Something went wrong. Please email info@redpremere.com directly.'); }
-      } catch(err) { alert('Something went wrong. Please email info@redpremere.com directly.'); }
-      btn.textContent = 'Send Inquiry';
-      btn.disabled = false;
-    });
-  }
-</script>
-  const pkg = params.get('package');
-  if (pkg) {
-    const sel = document.getElementById('packageSelect');
-    if (sel) { for (let i=0; i<sel.options.length; i++) { if (sel.options[i].value===pkg) { sel.selectedIndex=i; break; } } }
-    const h = document.getElementById('packageField');
-    if (h) h.value = pkg;
-  }
-
-  const form = document.getElementById('inquiryForm');
-  if (form) {
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const btn = document.getElementById('submitBtn');
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-      try {
-        const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
-        if (res.ok) { openDialog(); form.reset(); }
+        const data = await res.json();
+        if (data.success) { openDialog(); form.reset(); }
         else { alert('Something went wrong. Please email info@redpremere.com directly.'); }
       } catch(err) { alert('Something went wrong. Please email info@redpremere.com directly.'); }
       btn.textContent = 'Send Inquiry';
