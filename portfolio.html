@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Red Premere Enterprises portfolio — our work in custom merchandise, branded bottles, business websites and digital identity for local businesses.">
+<meta name="description" content="Red Premere Enterprises portfolio — websites, web applications and institutional supply work delivered from Varanasi, Uttar Pradesh.">
 <title>Portfolio | Red Premere Enterprises</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="alternate icon" href="favicon.ico">
@@ -22,6 +22,11 @@
 .portfolio-title { font-family:'Anton',sans-serif; font-size:1.1rem; text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px; }
 .portfolio-desc { font-size:12px; color:var(--grey); font-weight:300; line-height:1.6; margin-bottom:14px; }
 .portfolio-tags { display:flex; gap:6px; flex-wrap:wrap; }
+.pstatus { font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:4px 10px; }
+.pstatus.done { background:rgba(42,122,42,.15); color:#4caf50; }
+.pstatus.dev { background:rgba(212,175,55,.15); color:#D4AF37; }
+.pstatus.live { background:rgba(70,130,200,.15); color:#6ab0f3; }
+.portfolio-card-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
 .ptag { font-size:9px; font-weight:600; letter-spacing:1px; text-transform:uppercase; padding:3px 9px; background:rgba(204,0,0,.1); color:var(--red); }
 .coming-soon { background:var(--black-card); border:1px dashed #2a2a2a; display:flex; align-items:center; justify-content:center; text-align:center; min-height:300px; flex-direction:column; gap:12px; padding:32px; }
 @media(max-width:768px) { .portfolio-grid { grid-template-columns:1fr; } }
@@ -42,6 +47,7 @@
       <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
       <li><a href="about.html" class="nav-link">About</a></li>
       <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="https://store.redpremere.com" class="nav-link" target="_blank" rel="noopener">Store &#8599;</a></li>
     </ul>
     <a href="contact.html" class="nav-cta">Get a Quote</a>
     <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -53,92 +59,108 @@
   <a href="portfolio.html" class="nav-link">Portfolio</a>
   <a href="about.html" class="nav-link">About</a>
   <a href="contact.html" class="nav-link">Contact</a>
+  <a href="https://store.redpremere.com" class="nav-link" target="_blank" rel="noopener">Store &#8599;</a>
   <a href="contact.html" class="btn btn-red nav-cta">Get a Quote</a>
 </div>
 
 <section class="page-hero">
   <div class="container">
     <span class="page-hero-eyebrow">Our Work</span>
-    <h1 class="page-hero-title">Every Brand We <span>Touch</span></h1>
+    <h1 class="page-hero-title">Work We&#39;ve <span>Delivered</span></h1>
     <div class="accent-line"></div>
-    <p class="page-hero-sub">Websites built, bottles designed, merch printed. This is the work we do for local businesses in Varanasi and beyond.</p>
+    <p class="page-hero-sub">Websites, web applications and supply work &mdash; built and delivered from Varanasi.</p>
   </div>
 </section>
 
 <section style="padding:90px 0; background:var(--black);">
   <div class="container">
     <span class="section-eyebrow">Case Studies</span>
-    <h2 class="section-title">Work That <span>Speaks</span></h2>
+    <h2 class="section-title">Projects &amp; <span>Case Studies</span></h2>
     <div class="accent-line"></div>
-    <p class="section-sub">We're just getting started — and so is our portfolio. More work being added as we grow.</p>
+    <p class="section-sub">Each project below was designed, built and deployed by us. Status is shown as it actually stands.</p>
 
     <div class="portfolio-filter">
-      <button class="filter-btn active">All</button>
-      <button class="filter-btn">Websites</button>
-      <button class="filter-btn">Merch</button>
-      <button class="filter-btn">Bottles</button>
-      <button class="filter-btn">Digital Identity</button>
+      <button class="filter-btn active" data-cat="all">All</button>
+      <button class="filter-btn" data-cat="web">Websites</button>
+      <button class="filter-btn" data-cat="app">Web Apps</button>
+      <button class="filter-btn" data-cat="ecom">E-Commerce</button>
+      <button class="filter-btn" data-cat="govt">Government</button>
     </div>
 
     <div class="portfolio-grid">
-      <div class="portfolio-card" data-fade data-delay="1">
-        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#1a0000,#2a0500);">🌐</div>
+
+      <div class="portfolio-card" data-cat="web" data-fade data-delay="1">
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#1a0000,#2a0500);">&#127760;</div>
         <div class="portfolio-body">
-          <span class="portfolio-tag">Website</span>
-          <div class="portfolio-title">Honestbro.online</div>
-          <p class="portfolio-desc">Custom PHP/HTML homepage with dark-mode neon aesthetic, marquee animations, and order flow. Built for our consumer brand.</p>
-          <div class="portfolio-tags"><span class="ptag">Static HTML</span><span class="ptag">WordPress</span></div>
+          <div class="portfolio-card-head">
+            <span class="portfolio-tag">Client Website</span>
+            <span class="pstatus done">Completed</span>
+          </div>
+          <div class="portfolio-title">granixtech.in</div>
+          <p class="portfolio-desc">Corporate website for Granix Tech Solutions, an aggregate supply and rail logistics company. Twelve sections covering products, capabilities, fleet and enquiry flow. Single-file build, deployed on Cloudflare Pages with a custom domain.</p>
+          <div class="portfolio-tags"><span class="ptag">Static HTML</span><span class="ptag">Cloudflare Pages</span><span class="ptag">Responsive</span></div>
+          <a href="https://granixtech.in" target="_blank" rel="noopener" class="ptag" style="display:inline-block;margin-top:12px;text-decoration:none;background:rgba(204,0,0,.18);">Visit site &#8599;</a>
         </div>
       </div>
-      <div class="portfolio-card" data-fade data-delay="2">
-        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#001a00,#002a10);">💧</div>
+
+      <div class="portfolio-card" data-cat="app" data-fade data-delay="2">
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#001220,#00202f);">&#128202;</div>
         <div class="portfolio-body">
-          <span class="portfolio-tag">Branded Bottles</span>
-          <div class="portfolio-title">Custom Label Pack</div>
-          <p class="portfolio-desc">500ml and 1L custom-label packaged drinking water with QR codes linking to client websites.</p>
-          <div class="portfolio-tags"><span class="ptag">500ml</span><span class="ptag">1 Litre</span><span class="ptag">QR Enabled</span></div>
+          <div class="portfolio-card-head">
+            <span class="portfolio-tag">Web Application</span>
+            <span class="pstatus done">Completed</span>
+          </div>
+          <div class="portfolio-title">TripLedger</div>
+          <p class="portfolio-desc">A reconciliation tool for bulk material logistics. Matches delivery trips against challans and receipt records, flags mismatches, and exports a clean discrepancy sheet. Built to replace manual register checking.</p>
+          <div class="portfolio-tags"><span class="ptag">Web App</span><span class="ptag">Data Reconciliation</span><span class="ptag">Reporting</span></div>
         </div>
       </div>
-      <div class="portfolio-card" data-fade data-delay="3">
-        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#0a0020,#150030);">📱</div>
+
+      <div class="portfolio-card" data-cat="govt" data-fade data-delay="3">
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#0a1428,#12203c);">&#127979;</div>
         <div class="portfolio-body">
-          <span class="portfolio-tag">Digital Identity</span>
-          <div class="portfolio-title">NFC Business Cards</div>
-          <p class="portfolio-desc">Premium NFC-enabled smart cards that open a website on tap. Plus QR visiting cards — 50 pcs with full branding.</p>
-          <div class="portfolio-tags"><span class="ptag">NFC</span><span class="ptag">QR Code</span></div>
+          <div class="portfolio-card-head">
+            <span class="portfolio-tag">Institutional</span>
+            <span class="pstatus dev">In Development</span>
+          </div>
+          <div class="portfolio-title">Government School Portal</div>
+          <p class="portfolio-desc">A complete bilingual (Hindi/English) website template for a government inter college. Live notice board with admin panel, faculty directory, academics and admissions pages, photo gallery, feedback form and QR display card. Concept build &mdash; demo available on request.</p>
+          <div class="portfolio-tags"><span class="ptag">Bilingual</span><span class="ptag">Admin Panel</span><span class="ptag">Cloudflare Functions</span></div>
         </div>
       </div>
-      <div class="portfolio-card" data-fade data-delay="1">
-        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#1a1000,#2a1500);">👕</div>
+
+      <div class="portfolio-card" data-cat="ecom" data-fade data-delay="1">
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#001a10,#002a18);">&#128722;</div>
         <div class="portfolio-body">
-          <span class="portfolio-tag">Merchandise</span>
-          <div class="portfolio-title">Custom Printed Merch</div>
-          <p class="portfolio-desc">Custom printed T-shirts and hoodies with your logo or design. Used for corporate uniforms and brand merchandise.</p>
-          <div class="portfolio-tags"><span class="ptag">T-Shirts</span><span class="ptag">Custom Printed</span></div>
+          <div class="portfolio-card-head">
+            <span class="portfolio-tag">E-Commerce</span>
+            <span class="pstatus live">Ongoing</span>
+          </div>
+          <div class="portfolio-title">store.redpremere.com</div>
+          <p class="portfolio-desc">Our own e-commerce branch, built from scratch. Customer accounts, saved addresses, cart, online payment, order confirmation emails and order history. This is also the storefront for our bottles, drinkware and custom merchandise.</p>
+          <div class="portfolio-tags"><span class="ptag">Astro</span><span class="ptag">Supabase</span><span class="ptag">Online Payments</span></div>
+          <a href="https://store.redpremere.com" target="_blank" rel="noopener" class="ptag" style="display:inline-block;margin-top:12px;text-decoration:none;background:rgba(204,0,0,.18);">Visit store &#8599;</a>
         </div>
       </div>
-      <div class="coming-soon" data-fade data-delay="2">
-        <div style="font-size:36px;opacity:.3;">📸</div>
+
+      <div class="coming-soon" data-cat="all" data-fade data-delay="2">
+        <div style="font-size:36px;opacity:.3;">&#128736;</div>
         <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#333;">Your Project Here</div>
-        <p style="font-size:12px;color:#333;font-weight:300;line-height:1.6;">Be our next case study. Get a bundle and your brand appears here.</p>
-        <a href="contact.html" class="btn btn-red" style="margin-top:16px;font-size:10px;">Get Started</a>
+        <p style="font-size:12px;color:#333;font-weight:300;line-height:1.6;">Need a website, a web app, or an institutional supply partner? Let&#39;s talk.</p>
+        <a href="contact.html" class="btn btn-red" style="margin-top:16px;font-size:10px;">Start a Project</a>
       </div>
-      <div class="coming-soon" data-fade data-delay="3">
-        <div style="font-size:36px;opacity:.3;">🏗️</div>
-        <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#333;">More Coming Soon</div>
-        <p style="font-size:12px;color:#333;font-weight:300;line-height:1.6;">Actively onboarding clients across Varanasi. New work added regularly.</p>
-      </div>
+
     </div>
   </div>
 </section>
 
 <section class="cta-banner">
   <div class="container">
-    <h2 class="cta-banner-title">Want to Be in <span style="color:var(--red);">Our Portfolio?</span></h2>
-    <p class="cta-banner-sub">Get a bundle pack and we'll build your brand from scratch — website, bottles, merch and digital cards.</p>
+    <h2 class="cta-banner-title">Want Something <span style="color:var(--red);">Built or Supplied?</span></h2>
+    <p class="cta-banner-sub">Websites, web applications, school and institutional supply &mdash; send us the requirement and we will quote it.</p>
     <div class="cta-banner-btns">
       <a href="contact.html" class="btn btn-red">Start a Project</a>
-      <a href="services.html" class="btn btn-outline">See Packages</a>
+      <a href="services.html" class="btn btn-outline">See Services</a>
     </div>
   </div>
 </section>
@@ -162,7 +184,7 @@
       </div>
       <div>
         <div class="footer-heading">Services</div>
-        <ul class="footer-links"><li><a href="services.html" class="footer-link">Starter Pack</a></li><li><a href="services.html" class="footer-link">Pro Pack</a></li><li><a href="services.html" class="footer-link">Premium Pack</a></li><li><a href="services.html" class="footer-link">Bottle Reorders</a></li></ul>
+        <ul class="footer-links"><li><a href="services.html" class="footer-link">Government Supply</a></li><li><a href="services.html" class="footer-link">Web Development</a></li><li><a href="portfolio.html" class="footer-link">Projects</a></li><li><a href="https://store.redpremere.com" class="footer-link" target="_blank" rel="noopener">Online Store &#8599;</a></li></ul>
       </div>
       <div>
         <div class="footer-heading">Contact</div>
@@ -184,6 +206,11 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    document.querySelectorAll('.portfolio-grid > [data-cat]').forEach(card => {
+      const show = cat === 'all' || card.dataset.cat === cat || card.dataset.cat === 'all';
+      card.style.display = show ? '' : 'none';
+    });
   });
 });
 </script>

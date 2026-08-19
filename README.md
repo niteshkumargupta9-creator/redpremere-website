@@ -1,6 +1,30 @@
 # Red Premere Enterprises — redpremere.com
 
+**v1.1**
+
 Static website for Red Premere Enterprises, Varanasi, UP.
+
+## v1.1 — repositioning
+
+The site now leads with government/institutional supply and the project
+portfolio. Consumer products (bottles, merchandise) moved to the store.
+
+- **index.html** — new hero, "Government Supply" section (`#govt-supply`),
+  "Projects We've Built" section, "E-Commerce Branch" section. Bottle and merch
+  cards now link out to store.redpremere.com. Stats, marquee, offer strip and
+  "How It Works" rewritten around supply and quotations.
+- **portfolio.html** — placeholder cards removed. Four real projects with status
+  badges: granixtech.in (Completed), TripLedger (Completed), Government School
+  Portal (In Development), store.redpremere.com (Ongoing). Category filters now
+  actually filter.
+- **services.html** — three "lines of business" blocks added above the existing
+  bundle pricing: Government & Institutional Supply, Websites & Web Applications,
+  E-Commerce Branch.
+- **about.html** — headings updated.
+- **All pages** — nav and mobile nav gained a Store link; footer service list
+  replaced with Government Supply / Web Development / Projects / Online Store.
+
+Honestbro.online was removed from the portfolio as requested.
 
 ## File Structure
 ```
