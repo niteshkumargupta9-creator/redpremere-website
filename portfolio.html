@@ -11,11 +11,11 @@
 <link rel="stylesheet" href="css/style.css">
 <style>
 .portfolio-filter { display:flex; gap:10px; flex-wrap:wrap; margin:40px 0; }
-.filter-btn { padding:9px 22px; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; background:transparent; border:1px solid #2A3743; color:var(--grey); cursor:pointer; font-family:'IBM Plex Mono',ui-monospace,monospace; transition:all .25s; }
-.filter-btn.active,.filter-btn:hover { border-color:var(--red); color:var(--white); background:rgba(192,138,62,.1); }
+.filter-btn { padding:9px 22px; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; background:transparent; border:1px solid #C8D3E0; color:var(--grey); cursor:pointer; font-family:'IBM Plex Mono',ui-monospace,monospace; transition:all .25s; }
+.filter-btn.active,.filter-btn:hover { border-color:var(--red); color:var(--white); background:rgba(29,95,209,.1); }
 .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-.portfolio-card { background:var(--black-card); border:1px solid #26323E; overflow:hidden; transition:all .3s; }
-.portfolio-card:hover { border-color:var(--red); transform:translateY(-4px); box-shadow:0 10px 30px rgba(192,138,62,.15); }
+.portfolio-card { background:var(--black-card); border:1px solid #E2E8F0; overflow:hidden; transition:all .3s; }
+.portfolio-card:hover { border-color:var(--red); transform:translateY(-4px); box-shadow:0 10px 30px rgba(29,95,209,.15); }
 .portfolio-thumb { width:100%; height:220px; display:flex; align-items:center; justify-content:center; font-size:56px; }
 .portfolio-body { padding:22px; }
 .portfolio-tag { font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:7px; display:block; }
@@ -23,12 +23,12 @@
 .portfolio-desc { font-size:12px; color:var(--grey); font-weight:300; line-height:1.6; margin-bottom:14px; }
 .portfolio-tags { display:flex; gap:6px; flex-wrap:wrap; }
 .pstatus { font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:4px 10px; }
-.pstatus.done { background:rgba(110,156,151,.15); color:#4caf50; }
-.pstatus.dev { background:rgba(110,156,151,.15); color:#6E9C97; }
-.pstatus.live { background:rgba(126,160,196,.15); color:#6ab0f3; }
+.pstatus.done { background:rgba(15,123,108,.15); color:#0F7B6C; }
+.pstatus.dev { background:rgba(15,123,108,.15); color:#0F7B6C; }
+.pstatus.live { background:rgba(126,160,196,.15); color:#1D5FD1; }
 .portfolio-card-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
-.ptag { font-size:9px; font-weight:600; letter-spacing:1px; text-transform:uppercase; padding:3px 9px; background:rgba(192,138,62,.1); color:var(--red); }
-.coming-soon { background:var(--black-card); border:1px dashed #2A3743; display:flex; align-items:center; justify-content:center; text-align:center; min-height:300px; flex-direction:column; gap:12px; padding:32px; }
+.ptag { font-size:9px; font-weight:600; letter-spacing:1px; text-transform:uppercase; padding:3px 9px; background:rgba(29,95,209,.1); color:var(--red); }
+.coming-soon { background:var(--black-card); border:1px dashed #C8D3E0; display:flex; align-items:center; justify-content:center; text-align:center; min-height:300px; flex-direction:column; gap:12px; padding:32px; }
 @media(max-width:768px) { .portfolio-grid { grid-template-columns:1fr; } }
 </style>
 </head>
@@ -90,7 +90,7 @@
     <div class="portfolio-grid">
 
       <div class="portfolio-card" data-cat="web" data-fade data-delay="1">
-        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#132029,#16242E);">&#127760;</div>
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#EDF2F8,#EDF2F8);">&#127760;</div>
         <div class="portfolio-body">
           <div class="portfolio-card-head">
             <span class="portfolio-tag">Client Website</span>
@@ -99,12 +99,12 @@
           <div class="portfolio-title">granixtech.in</div>
           <p class="portfolio-desc">Corporate website for Granix Tech Solutions, an aggregate supply and rail logistics company. Twelve sections covering products, capabilities, fleet and enquiry flow. Single-file build, deployed on Cloudflare Pages with a custom domain.</p>
           <div class="portfolio-tags"><span class="ptag">Static HTML</span><span class="ptag">Cloudflare Pages</span><span class="ptag">Responsive</span></div>
-          <a href="https://granixtech.in" target="_blank" rel="noopener" class="ptag" style="display:inline-block;margin-top:12px;text-decoration:none;background:rgba(192,138,62,.18);">Visit site &#8599;</a>
+          <a href="https://granixtech.in" target="_blank" rel="noopener" class="ptag" style="display:inline-block;margin-top:12px;text-decoration:none;background:rgba(29,95,209,.18);">Visit site &#8599;</a>
         </div>
       </div>
 
       <div class="portfolio-card" data-cat="app" data-fade data-delay="2">
-        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#0E1922,#12212B);">&#128202;</div>
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#F5F7FB,#EDF2F8);">&#128202;</div>
         <div class="portfolio-body">
           <div class="portfolio-card-head">
             <span class="portfolio-tag">Web Application</span>
@@ -115,12 +115,12 @@
           <div class="portfolio-tags"><span class="ptag">Web App</span><span class="ptag">Data Reconciliation</span><span class="ptag">Reporting</span></div>
           <div class="ptag" style="display:inline-block;margin-top:12px;background:transparent;border:1px solid var(--rule);color:var(--grey);">Internal deployment</div>
           <!-- TRIPLEDGER: when a public URL exists, replace the div above with:
-               <a href="https://YOUR-URL" target="_blank" rel="noopener" class="ptag" style="display:inline-block;margin-top:12px;text-decoration:none;background:rgba(192,138,62,.18);">Visit site &#8599;</a> -->
+               <a href="https://YOUR-URL" target="_blank" rel="noopener" class="ptag" style="display:inline-block;margin-top:12px;text-decoration:none;background:rgba(29,95,209,.18);">Visit site &#8599;</a> -->
         </div>
       </div>
 
       <div class="portfolio-card" data-cat="govt" data-fade data-delay="3">
-        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#0E1A26,#14212E);">&#127979;</div>
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#F5F7FB,#EDF2F8);">&#127979;</div>
         <div class="portfolio-body">
           <div class="portfolio-card-head">
             <span class="portfolio-tag">Institutional</span>
@@ -129,12 +129,12 @@
           <div class="portfolio-title">Government School Portal</div>
           <p class="portfolio-desc">A complete bilingual (Hindi/English) website template for a government inter college. Live notice board with admin panel, faculty directory, academics and admissions pages, photo gallery, feedback form and QR display card. Concept build &mdash; demo available on request.</p>
           <div class="portfolio-tags"><span class="ptag">Bilingual</span><span class="ptag">Admin Panel</span><span class="ptag">Cloudflare Functions</span></div>
-          <a href="https://ggic-robertsganj.pages.dev" target="_blank" rel="noopener" class="ptag" style="display:inline-block;margin-top:12px;text-decoration:none;background:rgba(192,138,62,.18);">Visit demo &#8599;</a>
+          <a href="https://ggic-robertsganj.pages.dev" target="_blank" rel="noopener" class="ptag" style="display:inline-block;margin-top:12px;text-decoration:none;background:rgba(29,95,209,.18);">Visit demo &#8599;</a>
         </div>
       </div>
 
       <div class="portfolio-card" data-cat="ecom" data-fade data-delay="1">
-        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#0E1D22,#12262A);">&#128722;</div>
+        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#F5F7FB,#EDF2F8);">&#128722;</div>
         <div class="portfolio-body">
           <div class="portfolio-card-head">
             <span class="portfolio-tag">E-Commerce</span>
@@ -143,14 +143,14 @@
           <div class="portfolio-title">store.redpremere.com</div>
           <p class="portfolio-desc">Our own e-commerce branch, built from scratch. Customer accounts, saved addresses, cart, online payment, order confirmation emails and order history. This is also the storefront for our bottles, drinkware and custom merchandise.</p>
           <div class="portfolio-tags"><span class="ptag">Astro</span><span class="ptag">Supabase</span><span class="ptag">Online Payments</span></div>
-          <a href="https://store.redpremere.com" target="_blank" rel="noopener" class="ptag" style="display:inline-block;margin-top:12px;text-decoration:none;background:rgba(192,138,62,.18);">Visit store &#8599;</a>
+          <a href="https://store.redpremere.com" target="_blank" rel="noopener" class="ptag" style="display:inline-block;margin-top:12px;text-decoration:none;background:rgba(29,95,209,.18);">Visit store &#8599;</a>
         </div>
       </div>
 
       <div class="coming-soon" data-cat="all" data-fade data-delay="2">
         <div style="font-size:36px;opacity:.3;">&#128736;</div>
-        <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#4B5A67;">Your Project Here</div>
-        <p style="font-size:12px;color:#4B5A67;font-weight:300;line-height:1.6;">Need a website, a web app, or an institutional supply partner? Let&#39;s talk.</p>
+        <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#8494A8;">Your Project Here</div>
+        <p style="font-size:12px;color:#8494A8;font-weight:300;line-height:1.6;">Need a website, a web app, or an institutional supply partner? Let&#39;s talk.</p>
         <a href="contact.html" class="btn btn-red" style="margin-top:16px;font-size:10px;">Start a Project</a>
       </div>
 
@@ -200,7 +200,7 @@
     </div>
     <div class="footer-bottom">
       <span class="footer-bottom-text">© 2026 Red Premere Enterprises. All prices excl. GST.</span>
-      <span class="footer-bottom-brand"><span style="font-family:'Plus Jakarta Sans',system-ui;font-weight:800;font-size:13px;color:#C08A3E;">red</span><span style="font-family:'Plus Jakarta Sans',system-ui;font-weight:800;font-size:13px;color:#4B5A67;">premere</span><span style="color:#C08A3E;font-size:10px;margin-left:1px;">●</span></span>
+      <span class="footer-bottom-brand"><span style="font-family:'Plus Jakarta Sans',system-ui;font-weight:800;font-size:13px;color:#E63946;">red</span><span style="font-family:'Plus Jakarta Sans',system-ui;font-weight:800;font-size:13px;color:#0F1B2D;">premere</span><span style="color:#E63946;font-size:10px;margin-left:1px;">●</span></span>
     </div>
   </div>
 </footer>
