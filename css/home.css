@@ -20,8 +20,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(29,95,209,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(29,95,209,0.06) 1px, transparent 1px);
+    linear-gradient(rgba(0,176,186,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,176,186,0.06) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -167,7 +167,7 @@
   border: 1px solid var(--red);
   top: 40px; left: 0;
   transform: rotate(0deg);
-  box-shadow: 0 20px 60px rgba(29,95,209,0.2);
+  box-shadow: 0 20px 60px rgba(0,176,186,0.2);
 }
 
 .hero-card-stack:hover .hcard-back  { transform: rotate(8deg) translateY(-5px); }
@@ -367,7 +367,7 @@
 .service-num {
   font-family: var(--font-head);
   font-size: 64px;
-  color: rgba(29,95,209,0.08);
+  color: rgba(0,176,186,0.08);
   line-height: 1;
   margin-bottom: 12px;
   letter-spacing: -2px;
@@ -507,8 +507,8 @@
 .cta-band {
   background: linear-gradient(135deg, #F5F7FB 0%, #EDF2F8 50%, #F5F7FB 100%);
   padding: 80px 40px;
-  border-top: 1px solid rgba(29,95,209,0.2);
-  border-bottom: 1px solid rgba(29,95,209,0.2);
+  border-top: 1px solid rgba(0,176,186,0.2);
+  border-bottom: 1px solid rgba(0,176,186,0.2);
   position: relative;
   overflow: hidden;
 }
@@ -521,7 +521,7 @@
   transform: translateY(-50%);
   font-family: var(--font-head);
   font-size: 200px;
-  color: rgba(29,95,209,0.04);
+  color: rgba(0,176,186,0.04);
   pointer-events: none;
   letter-spacing: -10px;
 }

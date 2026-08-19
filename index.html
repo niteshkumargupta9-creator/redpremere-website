@@ -13,8 +13,8 @@
 /* ── HERO ── */
 .hero{position:relative;width:100%;min-height:100vh;display:flex;align-items:center;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:#FFFFFF;}
-.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 65% 50%,rgba(180,0,0,.22) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(29,95,209,.08) 0%,transparent 50%);}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(29,95,209,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(29,95,209,.035) 1px,transparent 1px);background-size:60px 60px;animation:gridPan 20s linear infinite;}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 65% 50%,rgba(180,0,0,.22) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(0,176,186,.08) 0%,transparent 50%);}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,176,186,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,176,186,.035) 1px,transparent 1px);background-size:60px 60px;animation:gridPan 20s linear infinite;}
 @keyframes gridPan{0%{background-position:0 0}100%{background-position:60px 60px}}
 .hero-particles{position:absolute;inset:0;overflow:hidden;z-index:0;}
 .particle{position:absolute;width:2px;height:2px;background:var(--red);border-radius:50%;animation:float var(--dur) ease-in-out infinite;opacity:0;}
@@ -35,19 +35,19 @@
 /* ── PRODUCT SHOWCASE (Hero Right) ── */
 .hero-showcase{position:relative;display:flex;align-items:center;justify-content:center;height:520px;opacity:0;animation:fadeInRight .9s ease .5s forwards;}
 .showcase-orbit{position:relative;width:420px;height:420px;}
-.orbit-ring{position:absolute;border-radius:50%;border:1px solid rgba(29,95,209,.12);animation:spin linear infinite;}
+.orbit-ring{position:absolute;border-radius:50%;border:1px solid rgba(0,176,186,.12);animation:spin linear infinite;}
 .orbit-ring:nth-child(1){inset:0;animation-duration:18s;}
 .orbit-ring:nth-child(2){inset:40px;animation-duration:14s;animation-direction:reverse;border-color:rgba(15,123,108,.1);}
-.orbit-ring:nth-child(3){inset:80px;animation-duration:22s;border-color:rgba(29,95,209,.08);}
+.orbit-ring:nth-child(3){inset:80px;animation-duration:22s;border-color:rgba(0,176,186,.08);}
 @keyframes spin{to{transform:rotate(360deg)}}
 .orbit-center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
-.main-product{animation:floatY 4s ease-in-out infinite;filter:drop-shadow(0 20px 40px rgba(29,95,209,.3));}
+.main-product{animation:floatY 4s ease-in-out infinite;filter:drop-shadow(0 20px 40px rgba(0,176,186,.3));}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 .orbit-satellite{position:absolute;animation:floatY ease-in-out infinite;}
 .orbit-satellite:nth-child(2){top:20px;right:20px;animation-duration:3.5s;animation-delay:.5s;}
 .orbit-satellite:nth-child(3){bottom:30px;left:20px;animation-duration:4.5s;animation-delay:1s;}
-.sat-glow{filter:drop-shadow(0 8px 20px rgba(29,95,209,.4));}
-.showcase-label{position:absolute;background:rgba(15,15,15,.9);border:1px solid rgba(29,95,209,.3);padding:8px 14px;border-radius:6px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gold);white-space:nowrap;backdrop-filter:blur(8px);}
+.sat-glow{filter:drop-shadow(0 8px 20px rgba(0,176,186,.4));}
+.showcase-label{position:absolute;background:rgba(15,15,15,.9);border:1px solid rgba(0,176,186,.3);padding:8px 14px;border-radius:6px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gold);white-space:nowrap;backdrop-filter:blur(8px);}
 .label-bottle{top:80px;left:-10px;animation:pulseLbl 3s ease-in-out infinite;}
 .label-tshirt{bottom:100px;right:-20px;animation:pulseLbl 3s ease-in-out infinite .8s;}
 .label-mug{bottom:30px;left:40px;animation:pulseLbl 3s ease-in-out infinite 1.5s;}
@@ -64,8 +64,8 @@
 .services-section{padding:100px 0;background:var(--black);}
 .services-grid-new{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;}
 .svc-card{background:var(--black-card);border:1px solid #EDF2F8;overflow:hidden;transition:all .4s cubic-bezier(.25,.8,.25,1);position:relative;cursor:pointer;}
-.svc-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(29,95,209,.08),transparent);opacity:0;transition:opacity .4s;}
-.svc-card:hover{transform:translateY(-8px);border-color:rgba(29,95,209,.5);box-shadow:0 20px 60px rgba(29,95,209,.2);}
+.svc-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,176,186,.08),transparent);opacity:0;transition:opacity .4s;}
+.svc-card:hover{transform:translateY(-8px);border-color:rgba(0,176,186,.5);box-shadow:0 20px 60px rgba(0,176,186,.2);}
 .svc-card:hover::before{opacity:1;}
 .svc-card-visual{height:220px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#FFFFFF;}
 .svc-card-visual-bg{position:absolute;inset:0;transition:transform .6s ease;}
@@ -260,15 +260,15 @@
 
 
 <!-- CATCHY HOOK STRIP -->
-<div style="background:linear-gradient(135deg,#F5F7FB,#EDF2F8);border-top:1px solid rgba(29,95,209,.2);border-bottom:1px solid rgba(29,95,209,.2);padding:22px 0;text-align:center;position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(29,95,209,.08),transparent 70%);"></div>
+<div style="background:linear-gradient(135deg,#F5F7FB,#EDF2F8);border-top:1px solid rgba(0,176,186,.2);border-bottom:1px solid rgba(0,176,186,.2);padding:22px 0;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,176,186,.08),transparent 70%);"></div>
   <div class="container" style="position:relative;z-index:1;">
     <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
       <span style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(15,27,45,.55);">Now Accepting</span>
-      <div style="width:1px;height:18px;background:rgba(29,95,209,.4);"></div>
+      <div style="width:1px;height:18px;background:rgba(0,176,186,.4);"></div>
       <span style="font-family:'Spectral',Georgia,serif;font-size:clamp(1rem,2.5vw,1.5rem);color:#0F1B2D;letter-spacing:.5px;text-transform:uppercase;">Schools &amp; institutions &mdash; send us your requirement list</span>
-      <span style="font-family:'Spectral',Georgia,serif;font-size:clamp(1.2rem,3vw,1.8rem);color:#1D5FD1;letter-spacing:.5px;">Written quote in 24h<span style="font-size:60%;color:rgba(15,27,45,.6);font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:400;letter-spacing:0;"> with GST invoice</span></span>
-      <a href="contact.html" style="background:#1D5FD1;color:#FFFFFF;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:10px 22px;text-decoration:none;flex-shrink:0;transition:background .25s;" onmouseover="this.style.background='#1750B5'" onmouseout="this.style.background='#1D5FD1'">Enquire Now →</a>
+      <span style="font-family:'Spectral',Georgia,serif;font-size:clamp(1.2rem,3vw,1.8rem);color:#006E75;letter-spacing:.5px;">Written quote in 24h<span style="font-size:60%;color:rgba(15,27,45,.6);font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:400;letter-spacing:0;"> with GST invoice</span></span>
+      <a href="contact.html" style="background:#00B0BA;color:#FFFFFF;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:10px 22px;text-decoration:none;flex-shrink:0;transition:background .25s;" onmouseover="this.style.background='#00565C'" onmouseout="this.style.background='#00B0BA'">Enquire Now →</a>
     </div>
     <p style="font-size:11px;color:rgba(15,27,45,.5);margin-top:8px;letter-spacing:.5px;">Notebooks &middot; Registers &middot; Pens &middot; Files &middot; Banners &middot; Uniforms &middot; School branding</p>
   </div>
@@ -276,7 +276,7 @@
 
 
 <!-- ═══ GOVERNMENT SUPPLY & E-TENDER ═══ -->
-<section id="govt-supply" style="padding:90px 0;background:linear-gradient(180deg,#FFFFFF,#F5F7FB);border-top:1px solid rgba(29,95,209,.15);">
+<section id="govt-supply" style="padding:90px 0;background:linear-gradient(180deg,#FFFFFF,#F5F7FB);border-top:1px solid rgba(0,176,186,.15);">
   <div class="container">
     <div data-fade>
       <span class="section-eyebrow">Government Supply</span>
@@ -317,7 +317,7 @@
 
     </div>
 
-    <div style="margin-top:40px;padding:26px 30px;background:rgba(29,95,209,.06);border:1px solid rgba(29,95,209,.2);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+    <div style="margin-top:40px;padding:26px 30px;background:rgba(0,176,186,.06);border:1px solid rgba(0,176,186,.2);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
       <div>
         <div style="font-family:'Spectral',Georgia,serif;font-size:1.15rem;color:#0F1B2D;text-transform:uppercase;letter-spacing:.04em;">Are you a school or institution?</div>
         <p style="font-size:12px;color:var(--grey);font-weight:300;margin-top:6px;">Send us your requirement list and we will return a written quotation with GST invoice.</p>
@@ -428,7 +428,7 @@
       <div class="svc-card" data-fade data-delay="4" style="padding:30px;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
           <span style="font-size:26px;">&#128722;</span>
-          <span style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;background:rgba(126,160,196,.15);color:#1D5FD1;">Ongoing</span>
+          <span style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;background:rgba(126,160,196,.15);color:#006E75;">Ongoing</span>
         </div>
         <h3 class="svc-card-title" style="margin-bottom:10px;">store.redpremere.com</h3>
         <p class="svc-card-desc">Our own e-commerce branch. Full storefront with customer accounts, cart, online payments and order tracking.</p>
