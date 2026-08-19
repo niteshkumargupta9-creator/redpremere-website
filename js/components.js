@@ -137,7 +137,7 @@
     </p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
       <a id="dialog-wa-btn" href="#" target="_blank" rel="noopener"
-         style="display:inline-block;padding:12px 24px;background:#25D366;color:white;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;">
+         style="display:inline-block;padding:12px 24px;background:#25D366;color:white;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;">
         Open WhatsApp
       </a>
       <button class="dialog-close" onclick="closeDialog()">Done</button>

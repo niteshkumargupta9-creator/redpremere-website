@@ -1,5 +1,62 @@
 # Red Premere Enterprises — redpremere.com
 
+**v1.3**
+
+## v1.3 — content pass
+
+- **about.html** rewritten. The old copy sold bottles and merch and linked out
+  to Honestbro; it now describes the firm as it actually is — a proprietorship
+  doing institutional supply and software. Values and "who we serve" grids
+  rewritten to lead with government schools, colleges and coaching centres.
+  The registration box now shows Udyam and the store instead of Honestbro.
+- **services.html** — the web development block was a bare heading. It now
+  carries four panels: what every site includes, institutional sites, web
+  applications, and how we work.
+- **portfolio.html** — the `REPLACE_WITH_TRIPLEDGER_URL` placeholder is gone
+  rather than shipping a dead link. TripLedger shows "Internal deployment", with
+  an HTML comment above it holding the anchor markup to paste back in if a
+  public URL ever exists.
+- **Project cards** — the school portal card on the home page now links to the
+  live GGIC demo, matching the portfolio page.
+- **Image slots** — each empty slot renders a dashed frame naming the file it
+  wants (`assets/img/supply.jpg` and so on) instead of collapsing silently.
+  See `assets/img/README.txt`.
+
+**v1.2**
+
+## v1.2 — "Ink & Brass" theme, website-only pricing
+
+**Theme.** Red-on-black replaced with a deep ink-navy ground, an antique-brass
+accent and a verdigris secondary. Display type is Spectral (serif, sentence
+case) instead of Anton (heavy condensed caps); eyebrows, prices, tags and stats
+are IBM Plex Mono so figures read like a quotation sheet. The old CSS variable
+names (`--red`, `--gold`) are kept so nothing downstream breaks — only their
+values changed. New tokens: `--rule`, `--font-display`, `--font-body`,
+`--font-mono`.
+
+**Hero.** The bottle/t-shirt/mug orbit and its floating price labels
+(₹8/pc, ₹500, ₹100) are gone. In their place is a "What we supply" panel — a
+five-row quotation sheet ending in the process line.
+
+**Pricing.** Merchandise pricing is removed site-wide. Only websites carry
+prices now: Starter ₹5,999, Business ₹9,999, custom web app quoted. Annual
+renewal ₹2,000. The "Individual Product Pricing" grid (bottles, t-shirts, caps,
+mugs) and the bottle-subscription loyalty tiers are deleted. The contact form's
+package dropdown was rebuilt to match.
+
+**Portfolio.** TripLedger and the school portal now have visit links.
+TripLedger's URL is a placeholder — see below.
+
+**Images.** `assets/img/` holds the filenames each `<img>` expects. Every one
+has an `onerror` handler, so missing files degrade quietly rather than showing
+a broken-image icon.
+
+### Two things to fill in
+
+1. `assets/img/README.txt` lists the eight photographs the layout expects.
+2. `portfolio.html` has `REPLACE_WITH_TRIPLEDGER_URL` — swap in the real URL,
+   or delete that one anchor if TripLedger has no public deployment.
+
 **v1.1**
 
 Static website for Red Premere Enterprises, Varanasi, UP.

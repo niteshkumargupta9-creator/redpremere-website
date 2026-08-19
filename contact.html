@@ -11,16 +11,16 @@
 <link rel="stylesheet" href="css/style.css">
 <style>
 .contact-layout { display:grid; grid-template-columns:1fr 1.6fr; gap:60px; padding:90px 0; align-items:start; }
-.info-card { background:var(--black-card); border:1px solid #222; padding:32px; margin-bottom:18px; }
+.info-card { background:var(--black-card); border:1px solid #26323E; padding:32px; margin-bottom:18px; }
 .info-title { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:18px; }
 .info-item { display:flex; gap:14px; align-items:flex-start; margin-bottom:18px; }
 .info-item:last-child { margin-bottom:0; }
-.info-icon { width:40px; height:40px; background:rgba(204,0,0,.15); border:1px solid rgba(204,0,0,.3); display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
+.info-icon { width:40px; height:40px; background:rgba(192,138,62,.15); border:1px solid rgba(192,138,62,.3); display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
 .info-label { font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:3px; }
 .info-val { font-size:13px; color:var(--white); font-weight:400; }
 .info-sub { font-size:11px; color:var(--grey); font-weight:300; margin-top:2px; }
-.form-wrapper { background:var(--black-card); border:1px solid #222; padding:40px; }
-.form-title { font-family:'Anton',sans-serif; font-size:1.8rem; text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; }
+.form-wrapper { background:var(--black-card); border:1px solid #26323E; padding:40px; }
+.form-title { font-family:'Spectral',Georgia,serif; font-size:1.8rem; text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; }
 .form-sub { font-size:13px; font-weight:300; color:var(--grey); margin-bottom:28px; line-height:1.6; }
 @media(max-width:768px) { .contact-layout { grid-template-columns:1fr; gap:32px; } }
 </style>
@@ -96,7 +96,7 @@
             <div style="font-size:13px;color:var(--grey-light);font-weight:300;">🏦 Bank Transfer (NEFT/IMPS)</div>
             <div style="font-size:13px;color:var(--grey-light);font-weight:300;">💵 Cash (in-person Varanasi)</div>
           </div>
-          <div style="margin-top:14px;padding-top:14px;border-top:1px solid #222;font-size:11px;color:#555;">GST invoice provided on all orders. Input tax credit applicable for B2B clients.</div>
+          <div style="margin-top:14px;padding-top:14px;border-top:1px solid #26323E;font-size:11px;color:#555;">GST invoice provided on all orders. Input tax credit applicable for B2B clients.</div>
         </div>
       </div>
 
@@ -148,14 +148,15 @@
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label" for="packageSelect">Package Interested In</label>
+              <label class="form-label" for="packageSelect">What do you need?</label>
               <select class="form-select" id="packageSelect" name="package_interest">
                 <option value="" disabled selected>Select package</option>
-                <option value="starter">Starter Pack — ₹9,999</option>
-                <option value="pro">Pro Pack — ₹14,999</option>
-                <option value="premium">Premium Pack — ₹21,999</option>
-                <option value="bottles-only">Bottles Only (200+ pcs/month)</option>
-                <option value="custom">Custom Requirement</option>
+                <option value="supply">Government / institutional supply</option>
+                <option value="starter">Website — Starter, &#8377;5,999</option>
+                <option value="business">Website — Business, &#8377;9,999</option>
+                <option value="app">Custom web application</option>
+                <option value="store">Bulk branding via our store</option>
+                <option value="custom">Something else</option>
               </select>
             </div>
           </div>
@@ -216,7 +217,7 @@
     </div>
     <div class="footer-bottom">
       <span class="footer-bottom-text">© 2026 Red Premere Enterprises. All prices excl. GST.</span>
-      <span class="footer-bottom-brand"><span style="font-family:'Plus Jakarta Sans',system-ui;font-weight:800;font-size:13px;color:#E63946;">red</span><span style="font-family:'Plus Jakarta Sans',system-ui;font-weight:800;font-size:13px;color:#333;">premere</span><span style="color:#E63946;font-size:10px;margin-left:1px;">●</span></span>
+      <span class="footer-bottom-brand"><span style="font-family:'Plus Jakarta Sans',system-ui;font-weight:800;font-size:13px;color:#C08A3E;">red</span><span style="font-family:'Plus Jakarta Sans',system-ui;font-weight:800;font-size:13px;color:#4B5A67;">premere</span><span style="color:#C08A3E;font-size:10px;margin-left:1px;">●</span></span>
     </div>
   </div>
 </footer>
