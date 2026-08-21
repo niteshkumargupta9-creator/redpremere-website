@@ -146,7 +146,7 @@ h1,h2,h3 { font-family: var(--font-display); text-transform: uppercase; letter-s
 .stats-bar { background: var(--red); padding: 22px 0; }
 .stats-inner { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 16px; }
 .stat-number { font-family: var(--font-display); font-size: 1.9rem; color: var(--white); line-height: 1; margin-bottom: 3px; }
-.stat-label { font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.7); }
+.stat-label { font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #5A6B7F; }
 .stat-item { text-align: center; }
 
 /* SERVICE CARDS */
@@ -574,3 +574,43 @@ a:focus-visible, button:focus-visible { outline: 2px solid #00565C; }
 
 /* Logo stays red — the accent never touches it */
 .logo-red, .logo-dot-mark { color: var(--brand-red); }
+
+
+/* ═══════════════════════════════════════════════════════════
+   v1.6 — MOBILE AND CONTRAST FIXES
+═══════════════════════════════════════════════════════════ */
+
+/* Every label that was light-on-dark now needs ink on white */
+.stat-label { color: #5A6B7F; }
+.bundle-price-note, .bundle-renewal { color: #5A6B7F; }
+.bundle-feature { color: #33475F; }
+.bundle-feature-check {
+  background: rgba(0,176,186,.14); color: #006E75;
+  width: 18px; height: 18px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 10px; flex-shrink: 0; margin-top: 2px;
+}
+.footer-contact-label { color: #006E75; }
+.footer-contact-val, .footer-brand-desc { color: #43536A; }
+.marquee-item { color: #5A6B7F; }
+.hiw-step-desc, .portfolio-desc { color: #5A6B7F; }
+
+/* Nothing may sit under the fixed nav when jumped to by anchor */
+section[id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
+
+/* Section headings were being clipped by the sticky nav on small screens */
+@media (max-width: 768px) {
+  .section-title, .page-hero-title { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+  .pricing-grid { grid-template-columns: 1fr; gap: 18px; }
+  .bundle-card { padding: 24px 20px; }
+  .bundle-price { font-size: 2.1rem; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .container { padding-left: 20px; padding-right: 20px; }
+}
+
+/* Tap targets: 44px minimum */
+@media (max-width: 768px) {
+  .btn, .nav-cta, .filter-btn { min-height: 44px; display: inline-flex;
+    align-items: center; justify-content: center; }
+}

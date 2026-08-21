@@ -33,7 +33,7 @@
 .hero-trust-dot{width:5px;height:5px;background:var(--red);border-radius:50%;}
 
 /* ── PRODUCT SHOWCASE (Hero Right) ── */
-.hero-showcase{position:relative;display:flex;align-items:center;justify-content:center;height:520px;opacity:0;animation:fadeInRight .9s ease .5s forwards;}
+.hero-showcase{position:relative;display:flex;align-items:center;justify-content:center;min-height:420px;opacity:0;animation:fadeInRight .9s ease .5s forwards;}
 .showcase-orbit{position:relative;width:420px;height:420px;}
 .orbit-ring{position:absolute;border-radius:50%;border:1px solid rgba(0,176,186,.12);animation:spin linear infinite;}
 .orbit-ring:nth-child(1){inset:0;animation-duration:18s;}
@@ -104,19 +104,38 @@
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   .hero-layout{grid-template-columns:1fr;gap:0;}
-  .hero-showcase{height:320px;}
+  .hero-showcase{height:auto;min-height:0;margin-top:30px;}
   .showcase-orbit{width:280px;height:280px;}
   .services-grid-new{grid-template-columns:1fr;}
 }
 @media(max-width:768px){
-  .hero-showcase{display:none;}
+  .hero-showcase{height:auto;min-height:0;margin-top:34px;}
   .hiw-steps{grid-template-columns:1fr 1fr;}
   .hiw-steps::before{display:none;}
   .pricing-grid{grid-template-columns:1fr;}
   .why-grid{grid-template-columns:1fr;}
   .services-grid-new{grid-template-columns:1fr;}
 }
-@media(max-width:480px){.hiw-steps{grid-template-columns:1fr;}}
+@media(max-width:480px){
+  .hiw-steps{grid-template-columns:1fr;}
+  .hero-row{padding:11px 16px;gap:10px;}
+  .hero-row-name{font-size:12px;}
+  .hero-row-note{font-size:9px;}
+  .hero-panel-head,.hero-panel-foot{padding:12px 16px;}
+  .hero-trust{gap:12px;}
+}
+
+/* Reduced motion must not leave animated content stuck at opacity:0 */
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow, .hero-title, .hero-subtitle, .hero-btns,
+  .hero-trust, .hero-showcase, [data-fade] {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+/* Belt and braces: if JS fails, nothing stays hidden */
+.no-js [data-fade] { opacity: 1 !important; transform: none !important; }
 </style>
 </head>
 <body>
@@ -412,7 +431,7 @@
         </div>
         <h3 class="svc-card-title" style="margin-bottom:10px;">TripLedger</h3>
         <p class="svc-card-desc">Web application for reconciling material delivery trips against challans and receipts. Built for bulk logistics operations.</p>
-        <span class="svc-card-link" style="opacity:.5;cursor:default;">Internal deployment</span>
+        <a href="https://tripledger.honestbro.online" target="_blank" rel="noopener" class="svc-card-link">Visit site &#8599;</a>
       </div>
 
       <div class="svc-card" data-fade data-delay="3" style="padding:30px;">
@@ -598,8 +617,8 @@
             <div class="logo-sub">Enterprises</div>
           </div>
         </a>
-        <p class="footer-brand-desc">Varanasi's complete brand partner — from printed merchandise and custom bottles to your digital presence. All under one roof.</p>
-        <div class="footer-badges"><span class="footer-badge">GST Reg.</span><span class="footer-badge">MSME Cert.</span><span class="footer-badge">Est. 2025</span></div>
+        <p class="footer-brand-desc">Government and institutional supply, websites and web applications &mdash; from Varanasi, Uttar Pradesh. GST invoice on every order.</p>
+        <div class="footer-badges"><span class="footer-badge">GST Registered</span><span class="footer-badge">Udyam / MSME</span><span class="footer-badge">Proprietorship</span></div>
       </div>
       <div>
         <div class="footer-heading">Navigation</div>
@@ -614,11 +633,12 @@
       <div>
         <div class="footer-heading">Services</div>
         <ul class="footer-links">
-          <li><a href="services.html" class="footer-link">Branded Bottles</a></li>
-          <li><a href="services.html" class="footer-link">Custom Merch</a></li>
-          <li><a href="services.html" class="footer-link">Business Website</a></li>
-          <li><a href="services.html" class="footer-link">NFC Cards</a></li>
-          <li><a href="services.html" class="footer-link">Pro Labeling</a></li>
+          <li><a href="services.html" class="footer-link">School &amp; institutional supply</a></li>
+          <li><a href="services.html" class="footer-link">Printed material &amp; banners</a></li>
+          <li><a href="services.html" class="footer-link">Uniforms &amp; ID cards</a></li>
+          <li><a href="services.html" class="footer-link">Websites from &#8377;5,999</a></li>
+          <li><a href="services.html" class="footer-link">Custom web applications</a></li>
+          <li><a href="https://store.redpremere.com" target="_blank" rel="noopener" class="footer-link">Online store &#8599;</a></li>
         </ul>
       </div>
       <div>

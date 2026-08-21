@@ -1,41 +1,63 @@
-# redpremere.com — patch v1.5
+# redpremere.com — patch v1.6
 
-Apply on top of v1.4. Copy over the repo root, keeping folder structure:
+Apply on top of v1.5. Copy over the repo root:
 
     index.html
+    services.html
     portfolio.html
+    about.html
     contact.html
     css/style.css
-    css/home.css
 
-`services.html` and `about.html` did not change in this patch — they carried no
-blue except through CSS variables, which style.css now redefines.
+`css/home.css` and `js/` are unchanged this time.
 
-## What changed
+## 1. Hero was invisible on mobile — two separate bugs
 
-Blue accent replaced with teal `#00B0BA` throughout — buttons, badges, rules,
-eyebrows, focus rings, hover states, tag pills.
+**Bug A.** The stylesheet had `@media(max-width:768px){ .hero-showcase{display:none} }`
+left over from when that column held the bottle graphic. It now holds the
+"What we supply" panel, i.e. real content, so on any phone the hero simply had
+nothing in it. The panel now shows, stacked under the heading, with its own
+padding and font sizes for small screens.
 
-## One adjustment you should know about
+**Bug B — my fault, introduced in v1.2.** The hero heading, subtitle, buttons
+and trust row all start at `opacity:0` and are revealed by a CSS animation. I
+had added `@media (prefers-reduced-motion: reduce) { *{animation:none} }`. On a
+phone with battery saver or "remove animations" switched on — the default on a
+lot of Androids once battery saver kicks in — the animation never runs, so
+those elements stayed at `opacity:0` permanently. That is why you saw the trust
+line and nothing else. The reduced-motion rule now forces `opacity:1` instead
+of just killing the animation.
 
-`#00B0BA` measures 2.65:1 against white. WCAG needs 4.5:1 for body text and
-3:1 for large text, so as a *font* colour on a white page it fails both — links
-and small labels would be genuinely hard to read, especially on a phone
-outdoors.
+## 2. White-on-white text
 
-So it is split in two:
+`.stat-label` was still `rgba(255,255,255,.7)` — invisible on the light ground.
+Same for the bundle price notes, renewal line, footer contact values and the
+marquee. All moved to ink or grey.
 
-- `#00B0BA` — fills only: button backgrounds, badges, the accent rule, dots,
-  focus outlines. Used as a background it is fine.
-- `#006E75` (`--accent-text`) — all type on white: links, eyebrows, the
-  highlighted words in headings, card links. Same hue, 6.0:1, reads cleanly.
+## 3. Website packages looked unrendered
 
-Filled teal buttons take ink text `#0F1B2D` rather than white — 6.5:1 against
-the teal, where white would have been 2.65:1.
+`services.html` was using `<ul class="bundle-features"><li>`, but the CSS only
+styles `.bundle-feature` divs with a check icon. The list had no styling at all,
+which is exactly the "unrendered" look. Rebuilt with the correct markup, so it
+now matches the home page cards.
 
-If you would rather have one single colour everywhere, say so and I will use
-`#006E75` for both. The look barely changes; the fills just go a shade deeper.
+## 4. Project links
 
-## Unchanged
+- **TripLedger** — now live at `tripledger.honestbro.online`, on both the home
+  page card and the portfolio card.
+- **granixtech.in**, **store**, **GGIC demo** — these were styled as small tag
+  pills, which do not read as buttons and are a poor tap target. All four are
+  now proper filled teal buttons.
 
-Logo is still red + ink (`--brand-red: #E63946`), independent of the accent.
+## 5. Footer ("services from below the homepage")
+
+Still advertised Branded Bottles, Custom Merch, NFC Cards and Pro Labeling, and
+described the firm as "Varanasi's complete brand partner". Replaced with the
+real service list plus a link to the store. Badges now read GST Registered /
+Udyam / Proprietorship instead of "MSME Cert. / Est. 2025".
+
+## 6. General mobile
+
+Single-column pricing, portfolio and footer grids under 768px; 44px minimum tap
+targets on buttons; `scroll-margin-top` on sections so anchor jumps are not
+hidden behind the fixed nav; tighter container padding.
